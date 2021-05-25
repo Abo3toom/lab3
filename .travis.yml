@@ -9,7 +9,10 @@ before_install:
   - sudo apt-get install -y qt5-default qttools5-dev-tools
   - pip install --user cpp-coveralls
 
-
+addons:
+  sonarcloud:
+    organization: "abo3toom"
+    token: $SONAR_TOKEN
 
 script:
   - qmake
